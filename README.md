@@ -1,5 +1,5 @@
 # BD-4Bi-Hortencia
 Alunas:
-Maria Julia
+Maria Julia,
+Oksane,
 Thaís
-Oksane
