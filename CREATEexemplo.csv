@@ -1,0 +1,10 @@
+CREATE TABLE Funcionarios (
+    id_funcionario SERIAL PRIMARY KEY,
+    nome VARCHAR(50),
+    cargo VARCHAR(40),
+    departamento VARCHAR(30),
+    salario NUMERIC(10,2),
+    turno VARCHAR(20),
+    cidade VARCHAR(40),
+    data_admissao DATE
+);

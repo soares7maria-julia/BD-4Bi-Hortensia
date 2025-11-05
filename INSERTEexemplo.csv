@@ -1,0 +1,11 @@
+INSERT INTO Funcionarios (nome, cargo, departamento, salario, turno, cidade, data_admissao) VALUES
+('João Pereira', 'Analista', 'TI', 5500.00, 'Noturno', 'Curitiba', '2020-03-15'),
+('Maria Santos', 'Analista', 'TI', 5500.00, 'Noturno', 'Curitiba', '2021-01-20'),
+('Lucas Lima', 'Técnico', 'Manutenção', 4200.00, 'Diurno', 'Londrina', '2019-07-12'),
+('Ana Souza', 'Gerente', 'RH', 6800.00, 'Diurno', 'Maringá', '2018-09-01'),
+('Pedro Alves', 'Auxiliar', 'Limpeza', 3000.00, 'Noturno', 'Campo Mourão', '2022-02-10'),
+('Carla Dias', 'Gerente', 'Financeiro', 7000.00, 'Diurno', 'Maringá', '2017-11-30'),
+('Rafael Torres', 'Analista', 'TI', 5500.00, 'Noturno', 'Curitiba', '2021-09-05'),
+('Juliana Reis', 'Técnico', 'Manutenção', 4200.00, 'Diurno', 'Londrina', '2020-04-18'),
+('Felipe Nunes', 'Auxiliar', 'Limpeza', 3000.00, 'Noturno', 'Campo Mourão', '2023-01-08'),
+('Bruna Oliveira', 'Gerente', 'Financeiro', 7000.00, 'Diurno', 'Maringá', '2018-05-22');
