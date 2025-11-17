@@ -14,12 +14,11 @@
   //Exibe o nome do programa no console
   console.log(" Descobridor de Dependências Funcionais (DFs) ");
 
-  // Busca automaticamente o nome da primeira tabela do banco (primeira tabela -> LIMIT 1)
+  // Busca automaticamente as tabelas do banco 
    const resultadoTabelas = await query(`
      SELECT table_name
      FROM information_schema.tables
-     WHERE table_schema = 'public'
-     LIMIT 1; 
+     WHERE table_schema = 'public';
    `); 
 
   //Pega o nome da primeira tabela do resultado; 'rows' guarda as linhas e '?.' evita erro se estiver vazio
@@ -53,6 +52,7 @@
   //Percorre cada coluna como possível lado direito (B)
   for (const lado_direito of lista_atributos) {
     for (const lado_esquerdo of lista_atributos) { //Percorre cada coluna como possível lado esquerdo (A)
+      //Se a coluna for igual a ela mesma, ele pula
       if (lado_direito === lado_esquerdo) continue; //Evita comparar coluna com ela mesma
 
       //Consulta pra verificar se é uma DF A->B
@@ -61,7 +61,7 @@
         FROM ${nomeTabela}
         GROUP BY ${lado_esquerdo}
         HAVING COUNT(DISTINCT ${lado_direito}) > 1;
-      `; //Verifica se um mesmo valor de A gera mais de um valor de B
+      `; //Verifica se A determina unicamente B
 
       //Executa a consulta SQL e espera o banco responder antes de continuar
       const resultado = await query(sql);
