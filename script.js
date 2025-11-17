@@ -135,7 +135,8 @@
     const keyB = b[0] + b[1] + b[2]; // Cria uma "chave" a partir da dependência "b", da mesma forma
     return keyA.localeCompare(keyB); //Compara as chaves em ordem alfabética: ordem das dependências no vetor
   });
-
+  
+  //curso, periodo -> periodo
   //Remove casos onde o lado direito (C) já aparece no lado esquerdo (A ou B)
   vetorAB_C = vetorAB_C.filter(([a, b, c]) => ![a, b].includes(c));
 
