@@ -153,7 +153,7 @@
   const setUnicosABC = new Set();
   //Set é uma coleção de valores únicos, que não permite repetições
 
-  for (const lado_direito of lista_atributos) { //Lado direito (C)
+  for (const lado_direito of lista_atributos) { //Lado direito (D)
     for (const lado_esquerdo1 of lista_atributos) { //Primeiro lado esquerdo (A)
       if (lado_direito === lado_esquerdo1) continue; //Evita comparar coluna com ela mesma
 
